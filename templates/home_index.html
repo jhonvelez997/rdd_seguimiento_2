@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+      <title>Seguimiento 2 </title>
+   </head>
+   <body>
+      {% for i in range(5) %}
+      <br>
+      {% endfor %}
+
+      <div class ="head">
+        <div class="titulo_principal">
+            <h1>Seguimiento 2 </h1>
+        </div>
+      </div>
+      {% for i in range(7) %}
+        <br>
+      {% endfor %}
+
+      <div class="code" href="https://github.com/jhonvelez997/rdd_seguimiento_2">
+        <h4>Código</h4>
+        <a href="https://github.com/jhonvelez997/rdd_seguimiento_2"><img src="{{ url_for('static', filename='images/git.png') }}" style width="80px" height="80px"></a>
+      </div>
+      {% for i in range(7) %}
+      <br>
+    {% endfor %}
+      <div class = "inst">
+         <p>Haz click en los endpoints listados abajos para expandir o colapsar los detalles.</p>
+      </div>
+      <div class="main_div">
+         <div class="endpoint_1">
+            <details>
+               <summary>
+                  /book_by_rating
+                  <span class="icon"></span>
+               </summary>
+               <p>Usa este endpoint para obtener libros filtrando por el rating </p>
+               <p>Parametros</p>
+               <ul>
+                  <li>rating_min : Númerico </li>
+                  <li>rating_max : Númerico </li>
+                  <li>Ejemplo: http://172.174.246.55:9191/book_by_rating?rating_min=4.3</li>
+                  <li>Ejemplo: http://172.174.246.55:9191/book_by_rating?rating_max=4.3</li>
+                  <li>Ejemplo: http://172.174.246.55:9191/book_by_rating?rating_max=4.3&rating_min=3.5</li>
+               </ul>
+            </details>
+            <hr>
+         </div>
+         {% for i in range(2) %}
+         <br>
+         {% endfor %}
+         <br>
+         <div>
+            <details>
+               <summary>
+                  /book_by_author
+               </summary>
+               <p>Usa este endpoint para obtener libros de acuerdo al author </p>
+               <p>Parametros</p>
+               <ul>
+                  <li>author : Alfabético </li>
+                  <li>Ejemplo: http://172.174.246.55:9191/book_by_author?author=Jonathan+Evison</li>
+               </ul>
+            </details>
+         </div>
+         <hr>
+         {% for i in range(2) %}
+         <br>
+         {% endfor %}
+         <br>
+         <div>
+            <details>
+               <summary>
+                  /book_by_year
+               </summary>
+               <p>Usa este endpoint para obtener libros filtrando por el año de publicación </p>
+               <p>Parametros</p>
+               <ul>
+                  <li>year: Númerico </li>
+                  <li>Ejemplo: http://172.174.246.55:9191/book_by_year?year=2004</li>
+               </ul>
+            </details>
+         </div>
+         <hr>
+         {% for i in range(2) %}
+         <br>
+         {% endfor %}
+         <br>
+         <div>
+            <details>
+               <summary>
+                  /get_book
+               </summary>
+               <p>Usa este endpoint para obtener peliculas filtrando por el genero </p>
+               <p>Parametros</p>
+               <ul>
+                  <li>year: Númerico </li>
+                  <li>author : Alfabético </li>
+                  <li>rating_min : Númerico </li>
+                  <li>rating_max : Númerico </li>
+                  <li>Ejemplo: http://172.174.246.55:9191/get_book?year=2004</li>
+                  <li>Ejemplo: http://172.174.246.55:9191/get_book?year=2004&author=John</li>
+                  <li>Ejemplo: http://172.174.246.55:9191/get_book?year=2004&author=John&rating_min=3.6</li>
+                  <li>Ejemplo: http://172.174.246.55:9191/get_book?year=2004&rating_min=3.6</li>
+                  <br>
+                  <li> Y todas las combinaciones posibles listadas en la tabla abajo</li>
+               </ul>
+               <br>
+               <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Opciones</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>author</td>
+                        <td>Ok</td>
+                    </tr>
+                    <tr>
+                        <td>year</td>
+                        <td>Ok</td>
+                    </tr>
+                    <tr>
+                        <td>rating_min</td>
+                        <td>Ok</td>
+                    </tr>
+                    <tr>
+                        <td>rating_max</td>
+                        <td>Ok</td>
+                    </tr>
+                    <tr>
+                        <td>author, year</td>
+                        <td>Ok</td>
+                    </tr>
+                    <tr>
+                        <td>author, rating_min</td>
+                        <td>Ok</td>
+                    </tr>
+                    <tr>
+                        <td>author, rating_max</td>
+                        <td>Ok</td>
+                    </tr>
+                    <tr>
+                        <td>year, rating_min</td>
+                        <td>Ok</td>
+                    </tr>
+                    <tr>
+                        <td>year, rating_max</td>
+                        <td>Ok</td>
+                    </tr>
+                    <tr>
+                        <td>rating_min, rating_max</td>
+                        <td>Ok</td>
+                    </tr>
+                    <tr>
+                        <td>author, year, rating_min</td>
+                        <td>Ok</td>
+                    </tr>
+                    <tr>
+                        <td>author, year, rating_max</td>
+                        <td>Ok</td>
+                    </tr>
+                    <tr>
+                        <td>author, rating_min, rating_max</td>
+                        <td>Ok</td>
+                    </tr>
+                    <tr>
+                        <td>year, rating_min, rating_max</td>
+                        <td>Ok</td>
+                    </tr>
+                    <tr>
+                        <td>author, year, rating_min, rating_max</td>
+                        <td>Ok</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+
+
+            </details>
+         </div>
+         <hr>
+         {% for i in range(2) %}
+         <br>
+         {% endfor %}
+      </div>
+   </body>
+</html>

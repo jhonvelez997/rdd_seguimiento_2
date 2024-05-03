@@ -1,0 +1,143 @@
+body {
+  background-color: #1a1a1a; /* Dark gray background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+.head {
+  position: relative; 
+}
+
+
+.titulo_principal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4c4c4c; 
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+  color: #fff; 
+  max-width: 600px;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Arial Black', sans-serif; 
+  color: #ff6f61; 
+}
+
+hr {
+  height: 1px;
+  width: 95%;
+  background-color: #fff; 
+  border: none;
+  margin: 20px auto;
+}
+
+.inst {
+  background-color: #4c4c4c; 
+  color: #fff; 
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+}
+
+.inst p {
+  text-align: justify;
+}
+
+.main_div {
+  width: 700px;
+  margin: 120px auto;
+  display: flex;
+  justify-content: center; 
+  flex-direction: column;
+  border: 2px groove #60515C; 
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #252933; 
+}
+
+
+details {
+  user-select: none;
+}
+
+details>summary {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #ff6f61; 
+  font-family: 'Arial', sans-serif;
+  font-size: larger;
+}
+
+details>summary::-webkit-details-marker {
+  display: none;
+}
+
+summary span.icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+details[open] summary span.icon {
+  transform: rotate(180deg);
+}
+
+p {
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+li {
+  font-family: 'Arial', sans-serif;
+  color: #fff; 
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.styled-table th, .styled-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #f2f2f2;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #4c4c4c;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+
+.code {
+  background-color: #252933;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px #777076;
+  color: #fff;
+  max-width: 300px;
+  text-align: center;
+  margin:0 auto;
+}
+
+.code h4 {
+  margin: 0;
+  font-size: 2rem;
+  font-family:monospace;
+}
